@@ -1,0 +1,15 @@
+def Max_pro(prices):
+  n = len(prices)
+  max_profit = 0
+  min_price = prices[0]
+  
+  for i in range(0,n):
+    profit = prices[i] - min_price
+    if profit > max_profit:
+      max_profit =profit
+    if prices[i] < min_price:
+      min_price = prices[i]
+  return max_profit
+
+stock = [10300,9000,8300,7500,7900,8700,9800]
+print(Max_pro(stock))
